@@ -2,9 +2,10 @@
 //	MathExtended is a library that contains some useful mathematical functions
 //	unavailable in the standard C++ library. 
 //
-//		Whole library is divided into two classes:
-// 		- MATH_EXTENDED: containing some useful mathematical formulas, constants and functions.
-//		- MATH_EXTENDED_PHYSICS: containing some useful physics formulas.
+//		Whole library contains class:
+// 		- MATH_EXTENDED: containing some useful mathematical formulas,
+//						 constants and functions.
+//
 // 
 // Written and copyrighted by: Jakub Kopiszka (c) 2025
 
@@ -35,27 +36,10 @@ public:
 	static unsigned long long factorial(unsigned long long n); // Factorial function
 	static unsigned int lcm(unsigned int a, unsigned int b); // Least common multiple function
 	static unsigned int gcd(unsigned int a, unsigned int b); // Greatest common divisor function
-	static unsigned int gcd_v2(unsigned int a, unsigned int b); // Greatest common divisor function (different algorithm)
+	static unsigned int quick_gcd(unsigned int a, unsigned int b); // Greatest common divisor function (different algorithm)
 
 	static double randomDouble(double min, double max); // Randomizer (int)
 	static unsigned long randomInt(unsigned int min, unsigned int max); // Randomizer (int)
-};
-
-// Initialization of static constants
-
-
-// Math_extended_physics class definition
-class MATH_EXTENDED_PHYSICS {
-public:
-	// VARIABLES DEFINITION
-	static const double G; // Gravitational constant
-	static const double e; // Elementary charge
-	static const double ep0; // Vacuum permittivity
-	static const double mu0; // Vacuum permeability
-
-	// FUNCTIONS DEFINITION
-	static double ndNewtonLaw(double m, double a); // Newton's second law of motion (Force)
-	static double ohmLaw(double I, double R); // Ohm's law (Voltage)
 };
 
 #endif

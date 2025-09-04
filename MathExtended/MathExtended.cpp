@@ -35,27 +35,6 @@ const double MATH_EXTENDED::SQRT5 = 2.23606797749978969640;
 
 
 /**
-@brief Value of gravity physical constant.
-*/
-const double MATH_EXTENDED_PHYSICS::G = 6.67430e-11;
-
-/**
-@brief Value of elementary charge physical constant.
-*/
-const double MATH_EXTENDED_PHYSICS::e = 1.602176634e-19;
-
-/**
-@brief Value of ep0 physical constant (permittivy of free space).
-*/
-const double MATH_EXTENDED_PHYSICS::ep0 = 8.8541878128e-12;
-
-/**
-@brief Value of magnetic physical constant.
-*/
-const double MATH_EXTENDED_PHYSICS::mu0 = 1.25663706212e-6;
-
-
-/**
 @brief Calculates factorial of given number.
 @param Number to calculate factorial of.
 @return Factorial of given number.
@@ -109,7 +88,7 @@ unsigned int MATH_EXTENDED::gcd(unsigned int a, unsigned int b)
 @return Least common multiply of given numbers.
 @remarks This is an alternative implementation of GCD algorithm, which uses pointers.
 */
-unsigned int MATH_EXTENDED::gcd_v2(unsigned int a, unsigned int b)
+unsigned int MATH_EXTENDED::quick_gcd(unsigned int a, unsigned int b)
 {
 	unsigned int* k = new unsigned int;
 	while (b != 0) {
@@ -142,26 +121,3 @@ double MATH_EXTENDED::randomDouble(double min, double max) {
 	srand(time(NULL));
 	return min + (double)rand() / RAND_MAX * (max - min);
 };
-
-/**
-@brief Calculates second newton law value.
-@param m Object's mass.
-@param a Object's acceleration.
-@return Force applied to object.
-*/
-double MATH_EXTENDED_PHYSICS::ndNewtonLaw(double m, double a)
-{
-	return m*a;
-}
-
-/**
-@brief Calculates electrical current based on ohm law.
-@param U Electrical voltage.
-@param R Electrical resistance.
-@return Electrical current of the object.
-*/
-double MATH_EXTENDED_PHYSICS::ohmLaw(double U, double R)
-{
-	return U*R;
-}
-
