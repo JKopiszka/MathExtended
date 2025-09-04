@@ -1,6 +1,6 @@
 // Inside DLL
+#include "pch.h"
 #include "MathExtended.h"
-#include <cstdlib>
 #include <ctime>
 #include <cmath>
 
@@ -17,8 +17,8 @@ extern "C" __declspec(dllexport) unsigned int gcd(unsigned int a, unsigned int b
 	return MATH_EXTENDED::gcd(a, b);
 }
 
-extern "C" __declspec(dllexport) unsigned int gcd_v2(unsigned int a, unsigned int b) {
-	return MATH_EXTENDED::gcd_v2(a, b);
+extern "C" __declspec(dllexport) unsigned int quick_gcd(unsigned int a, unsigned int b) {
+	return MATH_EXTENDED::quick_gcd(a, b);
 }
 
 extern "C" __declspec(dllexport) double randomDouble(double min, double max) {
