@@ -164,3 +164,4 @@ double MATH_EXTENDED_PHYSICS::ohmLaw(double U, double R)
 {
 	return U*R;
 }
+

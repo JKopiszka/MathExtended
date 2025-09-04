@@ -20,7 +20,7 @@
 #define MATH_EXTENDED_H
 
 // Math_extended class definition
-extern "C" MATH_EXTENDED_API class MATH_EXTENDED {
+class MATH_EXTENDED {
 public:
 
 	// VARIABLES DEFINITION
@@ -37,15 +37,15 @@ public:
 	static unsigned int gcd(unsigned int a, unsigned int b); // Greatest common divisor function
 	static unsigned int gcd_v2(unsigned int a, unsigned int b); // Greatest common divisor function (different algorithm)
 
-	double randomDouble(double min, double max); // Randomizer (int)
-	unsigned long randomInt(unsigned int min, unsigned int max); // Randomizer (int)
+	static double randomDouble(double min, double max); // Randomizer (int)
+	static unsigned long randomInt(unsigned int min, unsigned int max); // Randomizer (int)
 };
 
 // Initialization of static constants
 
 
 // Math_extended_physics class definition
-extern "C" MATH_EXTENDED_API class MATH_EXTENDED_PHYSICS {
+class MATH_EXTENDED_PHYSICS {
 public:
 	// VARIABLES DEFINITION
 	static const double G; // Gravitational constant
